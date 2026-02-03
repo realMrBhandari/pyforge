@@ -22,7 +22,7 @@ def login():
         pass_word = input("Incorrect password. Please try again:\t")
 
     print(
-        f"\vWelcome {user[1]}, You logged in at {current_time.strftime("%H:%M:%S")}\n"
+        f'\vWelcome {user[1]}, You logged in at {current_time.strftime("%H:%M:%S")}\n'
     )
 
 
