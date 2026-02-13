@@ -56,12 +56,31 @@ print(
 ============================================================\033[0m"""
 )
 print(
-    "======== Please select a product category ======== \v"
-    "1. Fruits  \v"
-    "2. Vegetables\v"
-    "3. Dairy\v"
-    "4. Bakerey\v"
-    "5. Beverages\v"
-    "6. Household Essentials\v"
+    """======== Please select a product category ========
+1. Fruits  
+2. Vegetables
+3. Dairy
+4. Bakerey
+5. Beverages
+6. Household Essentials\v"""
 )
-category_choice = input("Enter choice (\033[35m1\033[om - \033[35m6\033[0m)")
+category_choice = input("Enter choice (\033[35m1\033[0m - \033[35m6\033[0m): ")
+category_choice_validation = ["1", "2", "3", "4", "5", "6"]
+while category_choice not in category_choice_validation:
+    category_choice = input(
+        "\033[31mIncorrect Input! Try again\033[0m (\033[35m1\033[0m - \033[35m6\033[0m):"
+    )
+
+match category_choice:
+    case "1":
+        products_fetch(inventory_fruits)
+    case "2":
+        products_fetch(inventory_vegetables)
+    case "3":
+        products_fetch(inventory_dairy)
+    case "4":
+        products_fetch(inventory_bakery)
+    case "5":
+        products_fetch(inventory_beverages)
+    case "6":
+        products_fetch(inventory_households)
