@@ -44,9 +44,12 @@ inventory_households = ["Colin", "Vim", "Soap", "Tissue"]
 
 # ?
 def products_fetch(category):
-    n = 0
-    while n < len(category):
-        print(f"{n}. {category[n]}")
+    # while n < len(category):
+    #     print(f"{n}. {category[n]}")
+    #     n += 1
+    n = 1
+    for each_item in category:
+        print(f"{n}. {each_item}")
         n += 1
 
 
