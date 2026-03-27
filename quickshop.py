@@ -1,45 +1,47 @@
 # programme for simulating a self checkout kiosk in a mid-sized grocery store
 total = None
 delivery = None
-inventory_fruits = [
-    "banana",
-    "apple",
-    "orange",
-    "pomegranate",
-    "papaya",
-    "guava",
-    "coconut",
-    "pineapple",
-    "watermelon",
-    "muskmelon",
-    "grapes",
-]
-inventory_vegetables = [
-    "potato",
-    "onion",
-    "tomato",
-    "carrot",
-    "cabbage",
-    "cauliflower",
-    "mashroom",
-    "lettuce",
-    "cucumber",
-    "capsicum",
-    "garlic",
-    "beetroot",
-    "sweet potato",
-]
-inventory_dairy = [
-    "milk",
-    "chedder cheese",
-    "mozzarella cheese",
-    "curd",
-    "yogurt",
-    "cream",
-]
-inventory_bakery = ["Bread", "Buns", "Cake", "Doughnuts"]
-inventory_beverages = ["Water", "Ice Tea", "Coffee", "MoguMogu"]
-inventory_households = ["Colin", "Vim", "Soap", "Tissue"]
+inventory = {
+    "inventory_fruits": [
+        "banana",
+        "apple",
+        "orange",
+        "pomegranate",
+        "papaya",
+        "guava",
+        "coconut",
+        "pineapple",
+        "watermelon",
+        "muskmelon",
+        "grapes",
+    ],
+    "inventory_vegetables": [
+        "potato",
+        "onion",
+        "tomato",
+        "carrot",
+        "cabbage",
+        "cauliflower",
+        "mashroom",
+        "lettuce",
+        "cucumber",
+        "capsicum",
+        "garlic",
+        "beetroot",
+        "sweet potato",
+    ],
+    "inventory_dairy": [
+        "milk",
+        "chedder cheese",
+        "mozzarella cheese",
+        "curd",
+        "yogurt",
+        "cream",
+    ],
+    "inventory_bakery": ["Bread", "Buns", "Cake", "Doughnuts"],
+    "inventory_beverages": ["Water", "Ice Tea", "Coffee", "MoguMogu"],
+    "inventory_households": ["Colin", "Vim", "Soap", "Tissue"],
+}
 
 
 # ?
@@ -59,6 +61,7 @@ def products_fetch(category):
     # * V3 logic of fetch function, it is purely sequence driven and the counter is handeled by loop itself using enumerate, making function perform batter and eliminating unwanted bugs
     for s_no, product in enumerate(category, start=1):
         print(f"{s_no}. {product}")
+        # ! BUILD A FUNCTION TO FETCH VALUES FROM DICTIONARY CALLED AS INVENTORY
 
 
 print(
